@@ -1,0 +1,231 @@
+body
+{
+	background-color: #FAFAFA;
+	/*border: 2px solid black;*/
+}
+
+.Hotel-Pic-background
+{
+	position: absolute;
+    top: 0px; /* Y coordinate for the pill shape */
+    left: 0px; /* X coordinate for the pill shape */
+    width: 300px; /* Width for the pill shape */
+    height: 300px; /* Height for the pill shape */
+    background-color: #0077C0;
+    border-bottom-right-radius: 67px;
+
+}
+
+.Hotel-Pic-circle
+{
+	position: absolute;
+    top: 40px; /* Y coordinate for the pill shape */
+    left: 50px; /* X coordinate for the pill shape */
+    width: 200px; /* Width for the pill shape */
+    height: 200px; /* Height for the pill shape */
+    background-color: #FAFAFA;
+    border-radius: 50%;
+    overflow: hidden; /* Ensures the image doesn't overflow outside the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Hotel-Pic-circle img 
+{
+    width: 100%; 
+    height: auto;  
+}
+}
+.rectangle5
+{
+	position: absolute;
+	top: 200px;
+	left: 300px;
+	width: 12px;
+	height: 600px;
+	background-image: linear-gradient(#0077C0, #C7EEFF);
+	z-index: 1;
+}
+.Profile-Info
+{
+	position: absolute;
+	top: 200px;
+	left: 450px;
+	align-items: left;
+	font-family: 'Alegreya SC', serif;
+	font-size: 30px;
+	font-weight: bolder;
+	color: #0077C0;
+
+}
+
+.Register-Hotel-Info-button
+{
+	position: absolute;
+	top: 550px;
+	left: 450px;
+	width: 250px;
+	height: 50px;
+	font-family: 'Alegreya SC', serif;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: #0077C0;
+    color: #FAFAFA;
+}
+
+.footer
+{
+	position: fixed;
+	top: 913.94px; /* Y coordinate for the pill shape */
+    left: 0.38px; /* X coordinate for the pill shape */
+    width: 1622.5px; /* Width for the pill shape */
+    height: 251px; /* Height for the pill shape */
+    /*background-color: #1D242B;*/ /* Example color for the pill shape */
+    background-image: linear-gradient(#C7EEFF, #1D242B);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.About-Us
+{
+	/*margin-left: 56.55px; 
+	margin-top: 68.36px;*/
+	position: fixed;
+	top: 982.3px;
+	left: 56.93px;
+    font-family: 'Alegreya SC', serif;
+    font-size: 24px;
+    font-weight: bolder;
+    color: #FAFAFA; /* Text color */
+}
+
+.Payment-Methods
+{
+	/*margin-left: 0px; 
+	margin-top: 69.98x;*/
+	position: fixed;
+	top: 994.31px;
+	left: 673.08px;
+    font-family: 'Alegreya SC', serif;
+    font-size: 24px;
+    font-weight: bolder;
+    color: #FAFAFA;
+}
+
+.fa-cc-visa
+{
+	position: absolute;
+	top: 50px;
+	left: 20px;
+	font-size: 48px;
+	background-color: transparent;
+	color: #FAFAFA;
+}
+
+.bkash
+{
+	position: absolute;
+	top: 40px;
+	left: 100px;
+	font-size: 10px;
+	height: 70px;
+	width: 70px;
+	background-color: transparent;
+	color: #FAFAFA;
+}
+
+
+.Contact
+{
+	position: fixed;
+	top: 980.31px; /* Y coordinate for the pill shape */
+    left: 1325.08px;
+    font-family: 'Alegreya SC', serif;
+    font-size: 24px;
+    font-weight: bolder;
+    color: #FAFAFA; 
+}
+
+.fa-facebook
+{
+	position: absolute;
+	top: 50px;
+	left: -65px;
+	font-size: 48px;
+	background-color: transparent;
+	color: #FAFAFA;
+}
+
+.fa-envelope
+{
+	position: absolute;
+	top: 50px;
+	left: 30px;
+	font-size: 48px;
+	background-color: transparent;
+	color: #FAFAFA;
+}
+
+.fa-phone
+{
+	position: absolute;
+	top: 50px;
+	left: 130px;
+	font-size: 48px;
+	background-color: transparent;
+	color: #FAFAFA;
+
+}
+
+.Copyright
+{
+	
+	/*margin-left: 0px; 
+	margin-top: 141.59px;*/
+	position: fixed;
+	top: 1125.51px;
+	left: 605.78px;
+    font-family: 'Alegreya SC', serif;
+    font-size: 16px;
+    color: #FAFAFA; 
+    
+}
+
+.Hotel-Info-Text
+{
+	position: absolute;
+	top: 100px;
+	left: 775px;
+	align-items: center;
+	font-family: 'Alegreya SC', serif;
+	font-size: 50px;
+	font-weight: bolder;
+	color: #0077C0;
+	font-variant: small-caps;
+
+}
+
+
+.Hotel-Rectangle
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 350px;
+	height: 930px;
+	background-image: url('VerticalH2.jpg');
+	overflow: hidden; /* Ensures the image doesn't overflow outside the circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a
+{
+    color: #FAFAFA;
+    text-decoration: none;
+}

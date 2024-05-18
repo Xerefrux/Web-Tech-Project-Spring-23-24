@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.2.1
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: May 18, 2024 at 06:55 AM
+- Server version: 10.4.32-MariaDB
+- PHP Version: 8.2.12
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="tourist_management" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="admin">
+                CREATE TABLE `admin` (
+                  `A_ID` varchar(20) NOT NULL,
+                  `NAME` varchar(20) DEFAULT NULL,
+                  `EMAIL` varchar(20) DEFAULT NULL,
+                  `PASSWORD` varchar(10) DEFAULT NULL,
+                  `MOBILE` int(11) DEFAULT NULL,
+                  `ROLE` varchar(10) DEFAULT NULL,
+                  `LOGID` varchar(20) NOT NULL,
+                  PRIMARY KEY (`A_ID`),
+                  KEY `fk_admin` (`LOGID`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+            <pma:table name="bookings">
+                CREATE TABLE `bookings` (
+                  `ID` int(11) NOT NULL,
+                  `Name` text DEFAULT NULL,
+                  `Booking_Date` varchar(20) DEFAULT NULL,
+                  `Payments` int(11) DEFAULT NULL,
+                  `Manager_ID` int(20) NOT NULL,
+                  PRIMARY KEY (`ID`),
+                  KEY `Foreign_key` (`Manager_ID`),
+                  CONSTRAINT `Foreign_key` FOREIGN KEY (`Manager_ID`) REFERENCES `hotel_manager` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+            <pma:table name="check_in_list">
+                CREATE TABLE `check_in_list` (
+                  `ID` int(11) NOT NULL,
+                  `Name` text DEFAULT NULL,
+                  `Check_In_Date` varchar(20) DEFAULT NULL,
+                  `Payments` int(11) DEFAULT NULL,
+                  `Manager_ID` int(20) NOT NULL,
+                  PRIMARY KEY (`ID`),
+                  KEY `F_key2` (`Manager_ID`),
+                  CONSTRAINT `F_key2` FOREIGN KEY (`Manager_ID`) REFERENCES `hotel_manager` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+            <pma:table name="hotel service">
+                CREATE TABLE `hotel service` (
+                  `HS_ID` varchar(20) NOT NULL,
+                  `NAME` varchar(20) DEFAULT NULL,
+                  `DESCRIPTION` varchar(300) DEFAULT NULL,
+                  `PRICE` int(50) DEFAULT NULL,
+                  `DESTINATION` varchar(20) DEFAULT NULL,
+                  `TYPE OF HOTEL` varchar(10) DEFAULT NULL,
+                  `RATING` varchar(100) DEFAULT NULL,
+                  `AVAILABILITY` varchar(10) DEFAULT NULL,
+                  `T_ID` varchar(20) NOT NULL,
+                  `HSP_ID` varchar(20) NOT NULL,
+                  `A_ID` varchar(20) NOT NULL,
+                  `TP_ID` varchar(20) NOT NULL,
+                  PRIMARY KEY (`HS_ID`),
+                  KEY `fk_hotel_service` (`T_ID`),
+                  KEY `f` (`HSP_ID`),
+                  KEY `fk_hs_admin` (`A_ID`),
+                  KEY `fk_hs_plan` (`TP_ID`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+            <pma:table name="hotel service provider">
+                CREATE TABLE `hotel service provider` (
+                  `HSP_ID` varchar(20) NOT NULL,
+                  `NAME` varchar(20) DEFAULT NULL,
+                  `EMAIL` varchar(20) DEFAULT NULL,
+                  `PASSWORD` int(10) DEFAULT NULL,
+                  `ADDRESS` varchar(30) DEFAULT NULL,
+                  `MOBILE` int(11) DEFAULT NULL,
+                  `RATING` varchar(100) DEFAULT NULL,
+                  `LOGID` varchar(20) NOT NULL,
+                  `T_ID` varchar(20) NOT NULL,
+                  `TA_ID` varchar(20) NOT NULL,
+                  `A_ID` varchar(20) NOT NULL,
+                  PRIMARY KEY (`HSP_ID`),
+                  KEY `fk_service_provider` (`LOGID`),
+                  KEY `fk_t_a` (`TA_ID`),
+                  KEY `fk_t` (`T_ID`),
+                  KEY `fk_a` (`A_ID`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+            <pma:table name="hotel_info">
+                CREATE TABLE `hotel_info` (
+                  `Hotel_ID` int(20) NOT NULL AUTO_INCREMENT,
+                  `Name` text DEFAULT NULL,
+                  `Address` text DEFAULT NULL,
+                  `Email` text DEFAULT NULL,
+                  `Description` text DEFAULT NULL,
+                  `Image` varchar(255) DEFAULT NULL,
+                  `Manager_ID` int(20) NOT NULL,
+                  PRIMARY KEY (`Hotel_ID`),
+                  KEY `F_key` (`Manager_ID`),
+                  CONSTRAINT `F_key` FOREIGN KEY (`Manager_ID`) REFERENCES `hotel_manager` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE
+                ) ENGINE=InnoDB AUTO_INCREMENT=1006 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+            <pma:table name="hotel_manager">
+                CREATE TABLE `hotel_manager` (
+                  `ID` int(20) NOT NULL,
+                  `Name` text DEFAULT NULL,
+                  `Password` text DEFAULT NULL,
+                  `Email` text DEFAULT NULL,
+                  `Address` text DEFAULT NULL,
+                  `Image` varchar(255) DEFAULT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+            <pma:table name="login">
+                CREATE TABLE `login` (
+                  `LOGID` varchar(20) NOT NULL,
+                  `NAME` varchar(20) DEFAULT NULL,
+                  `PASSWORD` varchar(10) DEFAULT NULL,
+                  `ROLE` varchar(10) DEFAULT NULL,
+                  PRIMARY KEY (`LOGID`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+            <pma:table name="reviews">
+                CREATE TABLE `reviews` (
+                  `Review_ID` int(11) NOT NULL,
+                  `Customer_Name` text DEFAULT NULL,
+                  `Rating` text DEFAULT NULL,
+                  `Review` text NOT NULL,
+                  `Image` varchar(255) DEFAULT NULL,
+                  PRIMARY KEY (`Review_ID`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+            <pma:table name="room_no_seq">
+                CREATE TABLE `room_no_seq` (
+                  `next_not_cached_value` bigint(21) NOT NULL,
+                  `minimum_value` bigint(21) NOT NULL,
+                  `maximum_value` bigint(21) NOT NULL,
+                  `start_value` bigint(21) NOT NULL COMMENT &#039;start value when sequences is created or value if RESTART is used&#039;,
+                  `increment` bigint(21) NOT NULL COMMENT &#039;increment value&#039;,
+                  `cache_size` bigint(21) unsigned NOT NULL,
+                  `cycle_option` tinyint(1) unsigned NOT NULL COMMENT &#039;0 if no cycles are allowed, 1 if the sequence should begin a new cycle when maximum_value is passed&#039;,
+                  `cycle_count` bigint(21) NOT NULL COMMENT &#039;How many cycles have been done&#039;
+                ) ENGINE=InnoDB SEQUENCE=1;
+            </pma:table>
+            <pma:table name="room_service_request">
+                CREATE TABLE `room_service_request` (
+                  `Room_no` int(11) NOT NULL AUTO_INCREMENT,
+                  `Meal_time` text NOT NULL,
+                  `Appetizer` text NOT NULL,
+                  `Main_Dish` text NOT NULL,
+                  `Dessert` text NOT NULL,
+                  PRIMARY KEY (`Room_no`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=10001 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+            <pma:trigger name="Set_Max_Room_no">
+                CREATE TRIGGER `Set_Max_Room_no` BEFORE INSERT ON `room_service_request`
+                 FOR EACH ROW BEGIN
+                  IF NEW.Room_no &lt; 101 OR NEW.Room_no &gt; 110 THEN
+                    SIGNAL SQLSTATE &#039;45000&#039;
+                      SET MESSAGE_TEXT = &#039;Room_no must be between 101 and 110.&#039;;
+                  END IF;
+                END
+            </pma:trigger>
+            <pma:table name="tourist">
+                CREATE TABLE `tourist` (
+                  `T_ID` varchar(20) NOT NULL,
+                  `NAME` varchar(20) DEFAULT NULL,
+                  `EMAIL` varchar(30) DEFAULT NULL,
+                  `PASSWORD` varchar(10) DEFAULT NULL,
+                  `ADDRESS` varchar(30) DEFAULT NULL,
+                  `MOBILE` int(11) DEFAULT NULL,
+                  `DOB` date DEFAULT NULL,
+                  `NID` int(20) DEFAULT NULL,
+                  `PASSPORT` int(20) DEFAULT NULL,
+                  `GENDER` varchar(8) DEFAULT NULL,
+                  `ROLE` varchar(8) DEFAULT NULL,
+                  `LOGID` varchar(20) NOT NULL,
+                  `TA_ID` varchar(20) NOT NULL,
+                  `HSP_ID` varchar(20) NOT NULL,
+                  PRIMARY KEY (`T_ID`),
+                  KEY `fk_login` (`LOGID`),
+                  KEY `fk_hsp` (`HSP_ID`),
+                  KEY `fk_ta` (`TA_ID`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+            <pma:table name="tourist agent">
+                CREATE TABLE `tourist agent` (
+                  `TA_ID` varchar(20) NOT NULL,
+                  `NAME` varchar(20) DEFAULT NULL,
+                  `EMAIL` varchar(20) DEFAULT NULL,
+                  `PASSWORD` varchar(10) DEFAULT NULL,
+                  `ADDRESS` varchar(30) DEFAULT NULL,
+                  `MOBILE` int(11) DEFAULT NULL,
+                  `RATING` varchar(100) DEFAULT NULL,
+                  `ROLE` varchar(10) DEFAULT NULL,
+                  `LOGID` varchar(20) NOT NULL,
+                  `T_ID` varchar(20) NOT NULL,
+                  `HSP_ID` varchar(20) NOT NULL,
+                  `A_ID` varchar(20) NOT NULL,
+                  PRIMARY KEY (`TA_ID`),
+                  KEY `fk_agent` (`LOGID`),
+                  KEY `fk1_t` (`T_ID`),
+                  KEY `fk2_hsp` (`HSP_ID`),
+                  KEY `fk3_a` (`A_ID`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+            <pma:table name="tour planner">
+                CREATE TABLE `tour planner` (
+                  `TP_ID` varchar(20) NOT NULL,
+                  `NAME` varchar(20) DEFAULT NULL,
+                  `DESCRIPTION` varchar(300) DEFAULT NULL,
+                  `PRICE` int(50) DEFAULT NULL,
+                  `DESTINATION` varchar(20) DEFAULT NULL,
+                  `TYPE OF TRANSPORT` varchar(10) DEFAULT NULL,
+                  `RATING` varchar(100) DEFAULT NULL,
+                  `AVAILABILITY` varchar(10) DEFAULT NULL,
+                  `T_ID` varchar(20) NOT NULL,
+                  `TA_ID` varchar(20) NOT NULL,
+                  `A_ID` varchar(20) NOT NULL,
+                  PRIMARY KEY (`TP_ID`),
+                  KEY `fk_tour_plan` (`T_ID`),
+                  KEY `ta` (`TA_ID`),
+                  KEY `admin` (`A_ID`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'tourist_management'
+    -->
+    <database name="tourist_management">
+        <!-- Table admin -->
+        <!-- Table bookings -->
+        <table name="bookings">
+            <column name="ID">101</column>
+            <column name="Name">Nafis</column>
+            <column name="Booking_Date">24-05-2025</column>
+            <column name="Payments">16850</column>
+            <column name="Manager_ID">111</column>
+        </table>
+        <table name="bookings">
+            <column name="ID">102</column>
+            <column name="Name">Nadib</column>
+            <column name="Booking_Date">16-05-2024</column>
+            <column name="Payments">16850</column>
+            <column name="Manager_ID">111</column>
+        </table>
+        <!-- Table check_in_list -->
+        <table name="check_in_list">
+            <column name="ID">108</column>
+            <column name="Name">Zero</column>
+            <column name="Check_In_Date">27-05-2024</column>
+            <column name="Payments">69555</column>
+            <column name="Manager_ID">111</column>
+        </table>
+        <table name="check_in_list">
+            <column name="ID">109</column>
+            <column name="Name">Raiyan</column>
+            <column name="Check_In_Date">24-05-2024</column>
+            <column name="Payments">16000</column>
+            <column name="Manager_ID">111</column>
+        </table>
+        <table name="check_in_list">
+            <column name="ID">110</column>
+            <column name="Name">Noir</column>
+            <column name="Check_In_Date">24-05-2024</column>
+            <column name="Payments">11111</column>
+            <column name="Manager_ID">111</column>
+        </table>
+        <table name="check_in_list">
+            <column name="ID">123</column>
+            <column name="Name">Raiyan</column>
+            <column name="Check_In_Date">26-05-2024</column>
+            <column name="Payments">11000</column>
+            <column name="Manager_ID">111</column>
+        </table>
+        <table name="check_in_list">
+            <column name="ID">190</column>
+            <column name="Name">Zero</column>
+            <column name="Check_In_Date">24-05-2025</column>
+            <column name="Payments">166800</column>
+            <column name="Manager_ID">111</column>
+        </table>
+        <!-- Table hotel service -->
+        <!-- Table hotel service provider -->
+        <!-- Table hotel_info -->
+        <table name="hotel_info">
+            <column name="Hotel_ID">1000</column>
+            <column name="Name">Hotel Casadia</column>
+            <column name="Address">273/A</column>
+            <column name="Email">hc@gmail.com</column>
+            <column name="Description">This is a stylish hotel.</column>
+            <column name="Image">Hotel1.jpg</column>
+            <column name="Manager_ID">111</column>
+        </table>
+        <!-- Table hotel_manager -->
+        <table name="hotel_manager">
+            <column name="ID">1</column>
+            <column name="Name">Raiyan</column>
+            <column name="Password">123</column>
+            <column name="Email">rs@gmail.com</column>
+            <column name="Address">32/A, Dhaka</column>
+            <column name="Image">RS.jpg</column>
+        </table>
+        <table name="hotel_manager">
+            <column name="ID">111</column>
+            <column name="Name">Raiyan</column>
+            <column name="Password">1033</column>
+            <column name="Email">raiyansayeed0@gmail.com</column>
+            <column name="Address">273/A</column>
+            <column name="Image">pp.jpg</column>
+        </table>
+        <!-- Table login -->
+        <table name="login">
+            <column name="LOGID">01</column>
+            <column name="NAME">Raiyan</column>
+            <column name="PASSWORD">123</column>
+            <column name="ROLE"> H_Manager</column>
+        </table>
+        <table name="login">
+            <column name="LOGID">111</column>
+            <column name="NAME">Sayeed</column>
+            <column name="PASSWORD">321</column>
+            <column name="ROLE"> H_Manager</column>
+        </table>
+        <!-- Table reviews -->
+        <table name="reviews">
+            <column name="Review_ID">1</column>
+            <column name="Customer_Name">John Smith</column>
+            <column name="Rating">5-star</column>
+            <column name="Review">Great service and great food. really enjoyed my stay in this hotel.</column>
+            <column name="Image">Smith.jpg</column>
+        </table>
+        <table name="reviews">
+            <column name="Review_ID">154</column>
+            <column name="Customer_Name">Karen Williams</column>
+            <column name="Rating">2-star</column>
+            <column name="Review">Really disappointed with the services of this 5-star hotel. Their food was barely edible. they even had the audacity to put chick peas in an “Authentic chinese” fried rice.</column>
+            <column name="Image">Karen.jpg</column>
+        </table>
+        <!-- Table room_no_seq -->
+        <table name="room_no_seq">
+            <column name="next_not_cached_value">101</column>
+            <column name="minimum_value">101</column>
+            <column name="maximum_value">110</column>
+            <column name="start_value">101</column>
+            <column name="increment">1</column>
+            <column name="cache_size">1000</column>
+            <column name="cycle_option">0</column>
+            <column name="cycle_count">0</column>
+        </table>
+        <!-- Table room_service_request -->
+        <table name="room_service_request">
+            <column name="Room_no">101</column>
+            <column name="Meal_time">Lunch</column>
+            <column name="Appetizer">Bread</column>
+            <column name="Main_Dish">Fried Rice</column>
+            <column name="Dessert">Cake</column>
+        </table>
+        <table name="room_service_request">
+            <column name="Room_no">102</column>
+            <column name="Meal_time">Dinner</column>
+            <column name="Appetizer">Soup</column>
+            <column name="Main_Dish">Ramen</column>
+            <column name="Dessert">Pudding</column>
+        </table>
+        <!-- Table tourist -->
+        <!-- Table tourist agent -->
+        <!-- Table tour planner -->
+    </database>
+</pma_xml_export>

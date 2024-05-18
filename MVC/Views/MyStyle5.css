@@ -1,0 +1,609 @@
+body
+{
+	background-color: #FAFAFA;
+}
+.dashboard-pill
+{
+	position: absolute;
+    top: 76.14px; /* Y coordinate for the pill shape */
+    left: 65.53px; /* X coordinate for the pill shape */
+    width: 1494.74px; /* Width for the pill shape */
+    height: 58px; /* Height for the pill shape */
+    background-color: #1D242B; /* Example color for the pill shape */
+    border-radius: 29px; /* Half of the height for the pill shape */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.dashboard-title 
+{
+    margin-left: 190.26px; /* X coordinate for the text - X coordinate for the pill shape */
+    font-family: 'Alegreya SC', serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #FAFAFA; /* Text color */
+}
+
+.circle1 
+{
+    position: absolute;
+    top: 47.17px; /* Y coordinate */
+    left: 1381.38px; /* X coordinate */
+    width: 138.44px; /* Width */
+    height: 123px; /* Height */
+    background-color: #1D242B; /* Example color, change as needed */
+    border-radius: 50%; /* This creates the circle shape */
+    
+}
+
+.circle2 
+{
+    position: absolute;
+    top: 44.24px; /* Y coordinate */
+    left: 106.13px; /* X coordinate */
+    width: 138.44px; /* Width */
+    height: 123px; /* Height */
+    background-color: #1D242B; /* Example color, change as needed */
+    border-radius: 50%; /* This creates the circle shape */
+    
+}
+
+.circle3 
+{
+    position: absolute;
+    top: 59.21px; /* Y coordinate */
+    left: 1395.98px; /* X coordinate */
+    width: 110.3px; /* Width */
+    height: 98px; /* Height */
+    background-color: #FAFAFA; /* Example color, change as needed */
+    border-radius: 50%; /* This creates the circle shape */
+    
+}
+
+.circle4 
+{
+    position: absolute;
+    top: 56.27px; /* Y coordinate */
+    left: 119.6px; /* X coordinate */
+    width: 110.3px; /* Width */
+    height: 98px; /* Height */
+    background-color: #FAFAFA; /* Example color, change as needed */
+    border-radius: 50%; /* This creates the circle shape */
+    
+}
+
+/*.Profile_Pic-circle
+{
+    position: absolute;
+    top: 67.23px; 
+    left: 1406.09px; 
+    width: 91.17px; 
+    height: 79px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/
+
+
+.Profile-dropdown {
+    position: absolute;
+    top: 67.23px; 
+    left: 1406.09px; 
+}
+
+.Profile-button {
+    width: 91.17px; 
+    height: 79px; 
+    border-radius: 50%; 
+    /*background: url('pp.jpg');*/
+    background-size: cover;
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.Dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: center; 
+}
+
+.Dropdown-content a {
+    color: black;
+    padding: 16px 24px; 
+    text-decoration: none;
+    display: block;
+    font-size: 1.2em; 
+}
+
+.Profile-dropdown:hover .Dropdown-content {
+    display: block;
+}
+
+
+.Dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.Logo-circle
+{
+    position: absolute;
+    top: 64.28px; 
+    left: 125.21px; 
+    width: 104.68px; 
+    height: 90px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Logo-circle img 
+{
+    width: 100%; 
+    height: auto;  
+}
+
+.navigation-pill
+{
+	position: absolute;
+    top: 180.91px; 
+    left: 73.01px; 
+    width: 1480.18px; 
+    height: 84.4px; 
+    background-color: #FAFAFA; 
+    border-radius: 42.2px; 
+    /*border-color: 100px darkred;*/
+    box-shadow: 4px 4px 4px black;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.dashboard-button
+{
+	
+	margin-top: 2.68px;
+	margin-left: 30px;
+	width: 250px; 
+    height: 50px; 
+    background-color: #1D242B; 
+    border-radius: 25px; 
+    display: flex;
+    align-items: center;
+    color: #FAFAFA;
+    font-size: 2em; 
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dashboard-button-title
+{
+	margin-left: 42.99px; 
+    font-family: 'Alegreya SC', serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #FAFAFA; 
+}
+
+
+.Hotel-Room-button
+{
+	margin-top: 2.68px;
+	margin-left: 40px;
+ 
+	width: 250px; 
+    height: 49.92px; 
+    background-color: #1D242B; 
+    border-radius: 24.96px; 
+    display: flex;
+    align-items: center;
+    color: #FAFAFA;
+    font-size: 2em; 
+    justify-content: center;
+    cursor: pointer;
+}
+
+.Hotel-Room-button-title
+{
+	margin-left: 69.07px; 
+    font-family: 'Alegreya SC', serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: #FAFAFA; 
+}
+
+.Bookings-button
+{
+	margin-top: 2.68px;
+	margin-left: 40px;
+ 
+	width: 250px; 
+    height: 49.92px; 
+    background-color: #1D242B; 
+    border-radius: 24.96px; 
+    display: flex;
+    align-items: center;
+    color: #FAFAFA;
+    font-size: 2em; 
+    justify-content: center;
+    cursor: pointer;
+}
+
+.Bookings-button-title
+{
+	margin-left: 26.67px;
+    font-family: 'Alegreya SC', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #FAFAFA; 
+
+}
+
+.Room-Service-button
+{
+	margin-top: 2.68px;
+	margin-left: 40px;
+ 
+	width: 250px; 
+    height: 49.92px; 
+    background-color: #1D242B; 
+    border-radius: 24.96px; 
+    display: flex;
+    align-items: center;
+    color: #FAFAFA;
+    font-size: 2em; 
+    justify-content: center;
+    cursor: pointer;
+}
+
+.Room-Service-button-title
+{
+	margin-left: 54.66px; 
+    font-family: 'Alegreya SC', serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: #FAFAFA; 
+
+}
+
+.Payments-button
+{
+	margin-top: 2.68px;
+	margin-left: 40px;
+ 
+	width: 250px; 
+    height: 49.92px; 
+    background-color: #1D242B; 
+    border-radius: 24.96px; 
+    display: flex;
+    align-items: center;
+    color: #FAFAFA;
+    font-size: 2em; 
+    justify-content: center;
+    cursor: pointer;
+}
+
+.Payments-button-title
+{
+	margin-left: 54.66px; 
+    font-family: 'Alegreya SC', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #FAFAFA; 
+
+}
+
+.rectangle
+{
+	position: absolute;
+    top: 289.31px; 
+    left: 1px; 
+    width: 1621px; 
+    height: 878px; 
+    background-color: #C7EEFF; 
+    border-top-left-radius: 67px;
+    border-top-right-radius: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.Print-Button
+{
+    position: absolute;
+    top: 15px;
+    left: 1400px;
+    width: 150px;
+    height: 50px;
+    font-family: 'Alegreya SC', serif;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: #0077C0;
+    color: #FAFAFA;
+}
+
+.rectangle3
+{
+    position: absolute;
+    top: 100.31px;
+    left: 50px;
+    width: 1500px;
+    height: 550px;
+    background-color: #FAFAFA;
+    overflow: scroll;
+}
+
+.Logo-circle2
+{
+    position: absolute;
+    top: 15px; /* Y coordinate */
+    left: 15px; /* X coordinate */
+    width: 90px; 
+    height: 90px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Logo-circle2 img 
+{
+    width: 100%; 
+    height: auto;  
+}
+
+.Website-title
+{
+    position: absolute;
+    top: 43px; /* Y coordinate */
+    left: 100px; /* X coordinate */
+    font-family: 'Alegreya SC', serif;
+    font-size: 24px;
+    font-weight: bolder;
+    font-variant: small-caps;
+}
+
+.Invoice-title
+{
+    position: absolute;
+    top: 100px; /* Y coordinate */
+    left: 675px; /* X coordinate */
+    font-family: 'Alegreya SC', serif;
+    font-size: 30px;
+    font-weight: bolder;
+    font-variant: small-caps;
+}
+
+.Invoice-Info
+{
+    position: absolute;
+    top: 170px; /* Y coordinate */
+    left: 100px; /* X coordinate */
+    font-family: 'Alegreya SC', serif;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.Invoice-Table
+{
+    margin-top: 300px;
+    margin-left: 400px;
+    font-family: 'Alegreya SC', serif;
+    font-size: 25px;
+    background-color: #FAFAFA;
+    color: #1D242B;
+    padding: px;
+    border-collapse: collapse;
+    align-items: center;
+
+    
+
+    
+}
+
+
+.footer
+{
+	position: fixed;
+	top: 913.94px; 
+    left: 0.38px; 
+    width: 1622.5px; 
+    height: 251px; 
+    /*background-color: #1D242B;*/ 
+    background-image: linear-gradient(#C7EEFF, #1D242B);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.About-Us
+{
+	/*margin-left: 56.55px; 
+	margin-top: 68.36px;*/
+	position: fixed;
+	top: 982.3px;
+	left: 56.93px;
+    font-family: 'Alegreya SC', serif;
+    font-size: 24px;
+    font-weight: bolder;
+    color: #FAFAFA; 
+}
+
+.Payment-Methods
+{
+    /*margin-left: 0px; 
+    margin-top: 69.98x;*/
+    position: fixed;
+    top: 994.31px;
+    left: 673.08px;
+    font-family: 'Alegreya SC', serif;
+    font-size: 24px;
+    font-weight: bolder;
+    color: #FAFAFA;
+}
+
+.fa-cc-visa
+{
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    font-size: 48px;
+    background-color: transparent;
+    color: #FAFAFA;
+}
+
+.bkash
+{
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    font-size: 10px;
+    height: 70px;
+    width: 70px;
+    background-color: transparent;
+    color: #FAFAFA;
+}
+
+
+.Contact
+{
+    position: fixed;
+    top: 980.31px; 
+    left: 1325.08px;
+    font-family: 'Alegreya SC', serif;
+    font-size: 24px;
+    font-weight: bolder;
+    color: #FAFAFA; 
+}
+
+.fa-facebook
+{
+    position: absolute;
+    top: 50px;
+    left: -65px;
+    font-size: 48px;
+    background-color: transparent;
+    color: #FAFAFA;
+}
+
+.fa-envelope
+{
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    font-size: 48px;
+    background-color: transparent;
+    color: #FAFAFA;
+}
+
+.fa-phone
+{
+    position: absolute;
+    top: 50px;
+    left: 130px;
+    font-size: 48px;
+    background-color: transparent;
+    color: #FAFAFA;
+
+}
+
+
+.Copyright
+{
+	
+	/*margin-left: 0px; 
+	margin-top: 141.59px;*/
+	position: fixed;
+	top: 1125.51px;
+	left: 605.78px;
+    font-family: 'Alegreya SC', serif;
+    font-size: 16px;
+    color: #FAFAFA; 
+    
+}
+
+
+.Notification
+{
+	margin-left: 650px;
+	background-color: #1D242B;
+	border: none;
+	color: #FAFAFA;
+	font-size: 2em; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; 
+}
+
+.Message
+{
+	margin-left: 60px;
+	background-color: #1D242B;
+	border: none;
+	color: #FAFAFA;
+	font-size: 2em; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.Log_Out
+{
+	margin-left: 60px;
+	background-color: #1D242B;
+	border: none;
+	color: red;
+	font-size: 2em; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.selection-rectangle {
+    position: absolute;
+    top: 198px; 
+    left: 1260px; 
+    width: 250px; 
+    height: 131px; 
+    background-color: #C7EEFF; 
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding-left: 20px; 
+}
+
+.selected-title {
+    margin-left: 0px;
+    margin-top: -60px;
+    font-family: 'Alegreya SC', serif;
+    font-size: 2em; 
+    font-weight: bold;
+    color: black; 
+    /*margin-left: 10px; */
+
+
+}
+
+a
+{
+    color: #FAFAFA;
+    text-decoration: none;
+}

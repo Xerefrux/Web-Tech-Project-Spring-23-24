@@ -1,0 +1,526 @@
+body
+{
+	background-color: #FAFAFA;
+}
+.dashboard-pill
+{
+	position: absolute;
+    top: 76.14px; /* Y coordinate for the pill shape */
+    left: 65.53px; /* X coordinate for the pill shape */
+    width: 1494.74px; /* Width for the pill shape */
+    height: 58px; /* Height for the pill shape */
+    background-color: #1D242B; /* Example color for the pill shape */
+    border-radius: 29px; /* Half of the height for the pill shape */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.dashboard-title 
+{
+    margin-left: 190.26px; /* X coordinate for the text - X coordinate for the pill shape */
+    font-family: 'Alegreya SC', serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #FAFAFA; /* Text color */
+}
+
+.circle1 
+{
+    position: absolute;
+    top: 47.17px; /* Y coordinate */
+    left: 1381.38px; /* X coordinate */
+    width: 138.44px; /* Width */
+    height: 123px; /* Height */
+    background-color: #1D242B; /* Example color, change as needed */
+    border-radius: 50%; /* This creates the circle shape */
+    
+}
+
+.circle2 
+{
+    position: absolute;
+    top: 44.24px; /* Y coordinate */
+    left: 106.13px; /* X coordinate */
+    width: 138.44px; /* Width */
+    height: 123px; /* Height */
+    background-color: #1D242B; /* Example color, change as needed */
+    border-radius: 50%; /* This creates the circle shape */
+    
+}
+
+.circle3 
+{
+    position: absolute;
+    top: 59.21px; /* Y coordinate */
+    left: 1395.98px; /* X coordinate */
+    width: 110.3px; /* Width */
+    height: 98px; /* Height */
+    background-color: #FAFAFA; /* Example color, change as needed */
+    border-radius: 50%; /* This creates the circle shape */
+    
+}
+
+.circle4 
+{
+    position: absolute;
+    top: 56.27px; /* Y coordinate */
+    left: 119.6px; /* X coordinate */
+    width: 110.3px; /* Width */
+    height: 98px; /* Height */
+    background-color: #FAFAFA; /* Example color, change as needed */
+    border-radius: 50%; /* This creates the circle shape */
+    
+}
+
+/*.Profile_Pic-circle
+{
+    position: absolute;
+    top: 67.23px; 
+    left: 1406.09px; 
+    width: 91.17px; 
+    height: 79px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/
+
+
+.Profile-dropdown {
+    position: absolute;
+    top: 67.23px; 
+    left: 1406.09px; 
+}
+
+.Profile-button {
+    width: 91.17px; 
+    height: 79px; 
+    border-radius: 50%; 
+    /*background: url('pp.jpg');*/
+    background-size: cover;
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.Dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px; /* Increase the minimum width as needed */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: center; /* Align text to the right */
+}
+
+.Dropdown-content a {
+    color: black;
+    padding: 16px 24px; /* Increase padding for larger click areas */
+    text-decoration: none;
+    display: block;
+    font-size: 1.2em; /* Increase font size */
+}
+
+.Profile-dropdown:hover .Dropdown-content {
+    display: block;
+}
+
+/* Optional: Style the links on hover */
+.Dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.Logo-circle
+{
+    position: absolute;
+    top: 64.28px; /* Y coordinate */
+    left: 125.21px; /* X coordinate */
+    width: 104.68px; /* Width */
+    height: 90px; /* Height */
+    border-radius: 50%; /* This creates the circle shape */
+    overflow: hidden; /* Ensures the image doesn't overflow outside the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Logo-circle img 
+{
+    width: 100%; 
+    height: auto;  
+}
+
+.navigation-pill
+{
+	position: absolute;
+    top: 180.91px; /* Y coordinate for the pill shape */
+    left: 73.01px; /* X coordinate for the pill shape */
+    width: 1480.18px; /* Width for the pill shape */
+    height: 84.4px; /* Height for the pill shape */
+    background-color: #FAFAFA; /* Example color for the pill shape */
+    border-radius: 42.2px; /* Half of the height for the pill shape */
+    /*border-color: 100px darkred;*/
+    box-shadow: 4px 4px 4px black;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.dashboard-button
+{
+	
+	margin-top: 2.68px;
+	margin-left: 30px;
+	width: 250px; /* Width for the pill shape */
+    height: 50px; /* Height for the pill shape */
+    background-color: #1D242B; /* Example color for the pill shape */
+    border-radius: 25px; /* Half of the height for the pill shape */
+    display: flex;
+    align-items: center;
+    color: #FAFAFA;
+    font-size: 2em; /* Adjust the size as needed */
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dashboard-button-title
+{
+	margin-left: 42.99px; /* X coordinate for the text - X coordinate for the pill shape */
+    font-family: 'Alegreya SC', serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #FAFAFA; /* Text color */
+}
+
+
+.Hotel-Room-button
+{
+	margin-top: 2.68px;
+	margin-left: 40px;
+ 
+	width: 250px; /* Width for the pill shape */
+    height: 49.92px; /* Height for the pill shape */
+    background-color: #1D242B; /* Example color for the pill shape */
+    border-radius: 24.96px; /* Half of the height for the pill shape */
+    display: flex;
+    align-items: center;
+    color: #FAFAFA;
+    font-size: 2em; /* Adjust the size as needed */
+    justify-content: center;
+    cursor: pointer;
+}
+
+.Hotel-Room-button-title
+{
+	margin-left: 69.07px; /* X coordinate for the text - X coordinate for the pill shape */
+    font-family: 'Alegreya SC', serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: #FAFAFA; /* Text color */
+}
+
+.Bookings-button
+{
+	margin-top: 2.68px;
+	margin-left: 40px;
+ 
+	width: 250px; /* Width for the pill shape */
+    height: 49.92px; /* Height for the pill shape */
+    background-color: #1D242B; /* Example color for the pill shape */
+    border-radius: 24.96px; /* Half of the height for the pill shape */
+    display: flex;
+    align-items: center;
+    color: #FAFAFA;
+    font-size: 2em; /* Adjust the size as needed */
+    justify-content: center;
+    cursor: pointer;
+}
+
+.Bookings-button-title
+{
+	margin-left: 26.67px; /* X coordinate for the text - X coordinate for the pill shape */
+    font-family: 'Alegreya SC', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #FAFAFA; /* Text color */
+
+}
+
+.Room-Service-button
+{
+	margin-top: 2.68px;
+	margin-left: 40px;
+ 
+	width: 250px; /* Width for the pill shape */
+    height: 49.92px; /* Height for the pill shape */
+    background-color: #1D242B; /* Example color for the pill shape */
+    border-radius: 24.96px; /* Half of the height for the pill shape */
+    display: flex;
+    align-items: center;
+    color: #FAFAFA;
+    font-size: 2em; /* Adjust the size as needed */
+    justify-content: center;
+    cursor: pointer;
+}
+
+.Room-Service-button-title
+{
+	margin-left: 54.66px; /* X coordinate for the text - X coordinate for the pill shape */
+    font-family: 'Alegreya SC', serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: #FAFAFA; /* Text color */
+
+}
+
+.Payments-button
+{
+	margin-top: 2.68px;
+	margin-left: 40px;
+ 
+	width: 250px; /* Width for the pill shape */
+    height: 49.92px; /* Height for the pill shape */
+    background-color: #1D242B; /* Example color for the pill shape */
+    border-radius: 24.96px; /* Half of the height for the pill shape */
+    display: flex;
+    align-items: center;
+    color: #FAFAFA;
+    font-size: 2em; /* Adjust the size as needed */
+    justify-content: center;
+    cursor: pointer;
+}
+
+.Payments-button-title
+{
+	margin-left: 54.66px; /* X coordinate for the text - X coordinate for the pill shape */
+    font-family: 'Alegreya SC', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #FAFAFA; /* Text color */
+
+}
+
+.rectangle
+{
+	position: absolute;
+    top: 189.31px; /* Y coordinate for the pill shape */
+    left: 0px; /* X coordinate for the pill shape */
+    width: 1621px; /* Width for the pill shape */
+    height: 878px; /* Height for the pill shape */
+    background-color: #C7EEFF; /* Example color for the pill shape */
+    border-top-left-radius: 67px;
+    border-top-right-radius: 67px;/* Half of the height for the pill shape */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer
+{
+	position: fixed;
+	top: 913.94px; /* Y coordinate for the pill shape */
+    left: 0.38px; /* X coordinate for the pill shape */
+    width: 1622.5px; /* Width for the pill shape */
+    height: 251px; /* Height for the pill shape */
+    /*background-color: #1D242B;*/ /* Example color for the pill shape */
+    background-image: linear-gradient(#C7EEFF, #1D242B);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.About-Us
+{
+	/*margin-left: 56.55px; 
+	margin-top: 68.36px;*/
+	position: fixed;
+	top: 982.3px;
+	left: 56.93px;
+    font-family: 'Alegreya SC', serif;
+    font-size: 24px;
+    font-weight: bolder;
+    color: #FAFAFA; /* Text color */
+}
+
+.Payment-Methods
+{
+    /*margin-left: 0px; 
+    margin-top: 69.98x;*/
+    position: fixed;
+    top: 994.31px;
+    left: 673.08px;
+    font-family: 'Alegreya SC', serif;
+    font-size: 24px;
+    font-weight: bolder;
+    color: #FAFAFA;
+}
+
+.fa-cc-visa
+{
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    font-size: 48px;
+    background-color: transparent;
+    color: #FAFAFA;
+}
+
+.bkash
+{
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    font-size: 10px;
+    height: 70px;
+    width: 70px;
+    background-color: transparent;
+    color: #FAFAFA;
+}
+
+
+.Contact
+{
+    position: fixed;
+    top: 980.31px; /* Y coordinate for the pill shape */
+    left: 1325.08px;
+    font-family: 'Alegreya SC', serif;
+    font-size: 24px;
+    font-weight: bolder;
+    color: #FAFAFA; 
+}
+
+.fa-facebook
+{
+    position: absolute;
+    top: 50px;
+    left: -65px;
+    font-size: 48px;
+    background-color: transparent;
+    color: #FAFAFA;
+}
+
+.fa-envelope
+{
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    font-size: 48px;
+    background-color: transparent;
+    color: #FAFAFA;
+}
+
+.fa-phone
+{
+    position: absolute;
+    top: 50px;
+    left: 130px;
+    font-size: 48px;
+    background-color: transparent;
+    color: #FAFAFA;
+
+}
+
+
+.Copyright
+{
+	
+	/*margin-left: 0px; 
+	margin-top: 141.59px;*/
+	position: fixed;
+	top: 1125.51px;
+	left: 605.78px;
+    font-family: 'Alegreya SC', serif;
+    font-size: 16px;
+    color: #FAFAFA; 
+    
+}
+
+
+.Notification
+{
+	/*position: fixed;*/
+    margin-left: 650px;
+	background-color: #1D242B;
+	border: none;
+	color: #FAFAFA;
+	font-size: 2em; /* Adjust the size as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
+}
+
+.Message
+{
+	margin-left: 60px;
+	background-color: #1D242B;
+	border: none;
+	color: #FAFAFA;
+	font-size: 2em; /* Adjust the size as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.Log_Out
+{
+	margin-left: 60px;
+	background-color: #1D242B;
+	border: none;
+	color: red;
+	font-size: 2em; /* Adjust the size as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.selection-rectangle {
+    position: absolute;
+    top: 198px; /* Y coordinate for the pill shape */
+    left: 390px; /* X coordinate for the pill shape */
+    width: 250px; /* Width for the pill shape */
+    height: 131px; /* Height for the pill shape */
+    background-color: #C7EEFF; /* Example color for the pill shape */
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px; /* Half of the height for the pill shape */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Align children to the start */
+    padding-left: 20px; /* Add some padding inside the pill shape */
+}
+
+.selected-title {
+    margin-left: 0px;
+    margin-top: -60px;
+    font-family: 'Alegreya SC', serif;
+    font-size: 2em; /* Adjust the size as needed */
+    font-weight: bold;
+    color: black; /* Text color */
+    /*margin-left: 10px; */
+
+
+}
+
+a
+{
+    color: #FAFAFA;
+    text-decoration: none;
+}
+
+.About_Us
+{
+    position: absolute;
+    top: 10px; /* Y coordinate for the pill shape */
+    left: 100px; /* X coordinate for the pill shape */
+    width: 1400px; /* Width for the pill shape */
+    height: 750px;
+    font-size: 30px;
+    overflow: auto;
+}
+
+
+
